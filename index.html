@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revisão dos KPIs da Qualidade</title>
+<style>
+  :root{--bg:#f6f7f9;--card:#fff;--tx:#1d2330;--mut:#6b7385;--ln:#e3e6ec;--ok:#1f8a4c;--okb:#e5f5ec;--bad:#c0392b;--badb:#fbe9e7;--warn:#9a6700;--warnb:#fff4d6;--acc:#2f5bd3;--accb:#eef2fd}
+  @media (prefers-color-scheme:dark){:root{--bg:#14171d;--card:#1c2028;--tx:#e6e9ef;--mut:#9aa3b5;--ln:#2c323d;--ok:#5cc98a;--okb:#16301f;--bad:#f08070;--badb:#3a1d19;--warn:#e5b94a;--warnb:#33290f;--acc:#8aa8ff;--accb:#1f2740}}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);padding:28px 16px}
+  main{max-width:1100px;margin:0 auto}
+  h1{font-size:21px;margin:0 0 4px}
+  .sub{color:var(--mut);margin:0 0 22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:22px}
+  .tile{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:12px 14px}
+  .tile .l{color:var(--mut);font-size:12px}
+  .tile .v{font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:2px}
+  .tile .m{font-size:12px;color:var(--mut)}
+  section{background:var(--card);border:1px solid var(--ln);border-radius:10px;padding:16px 18px;margin-bottom:18px}
+  h2{font-size:16px;margin:0 0 4px}
+  h3{font-size:13px;margin:16px 0 6px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+  .src{color:var(--mut);font-size:12px;margin:0 0 10px}
+  .wrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:720px}
+  th,td{padding:7px 8px;border-bottom:1px solid var(--ln);text-align:left;vertical-align:top}
+  th{font-size:12px;color:var(--mut);font-weight:500}
+  td.id{color:var(--mut);font-size:12px;white-space:nowrap}
+  td.n{white-space:nowrap}
+  .new{font-weight:600}
+  .pill{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;white-space:nowrap}
+  .p-keep{background:var(--accb);color:var(--acc)}
+  .p-chg{background:var(--warnb);color:var(--warn)}
+  .p-add{background:var(--okb);color:var(--ok)}
+  .p-out{background:var(--badb);color:var(--bad)}
+  .down{color:var(--mut);font-size:11px}
+  ul{margin:6px 0;padding-left:20px}
+  li{margin:3px 0}
+  .alert{background:var(--warnb);border-color:transparent}
+  .alert h2{color:var(--warn)}
+  footer{color:var(--mut);font-size:12px;margin:8px 0 20px}
+</style>
+</head>
+<body>
+<main>
+<h1>Revisão dos KPIs da Qualidade</h1>
+<p class="sub">Setores 10 (Franquias – Qualidade e Fiscalização) e 15 (Backoffice – Comentários) · responsável: Victoria · histórico de 27/07 a 16/11/2026 no kpi-system, Suporte Unificado e Sapron · proposta de 17/11/2026, ainda não aplicada</p>
+
+<div class="grid">
+  <div class="tile"><div class="l">KPIs hoje</div><div class="v">62</div><div class="m">21 no setor 10 · 41 no setor 15</div></div>
+  <div class="tile"><div class="l">Saem (confirmado)</div><div class="v">6</div><div class="m">346, 347, 348, 2427, 3042, 3043</div></div>
+  <div class="tile"><div class="l">Agrupados</div><div class="v">2 → 1</div><div class="m">551 + 552</div></div>
+  <div class="tile"><div class="l">Ficam</div><div class="v">55</div><div class="m">17 no setor 10 · 38 no setor 15</div></div>
+  <div class="tile"><div class="l">Metas que mudam</div><div class="v">45</div><div class="m">todos ficam com meta</div></div>
+</div>
+
+<section>
+  <h2>Como as metas foram definidas</h2>
+  <ul>
+    <li><b>Produtividade</b> (o que depende da Victoria): perto da mediana dos últimos 30 dias, que puxa o ritmo sem ser impossível.</li>
+    <li><b>Resultado</b> (notas e taxas): um pouco acima do patamar atual, sem prometer salto.</li>
+    <li><b>Volume</b> (o que chega até ela): na mediana do histórico.</li>
+    <li><b>Acumulados</b>: a meta vale até 31/12, pelo ritmo atual.</li>
+    <li><span class="down">↓</span> = quanto menor, melhor.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Saem do painel</h2>
+  <p class="src">Sugestões da Victoria, confirmadas pelos dados</p>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Evidência</th></tr>
+    <tr><td class="id">346</td><td>Suportes abertos em anúncios</td><td>Zero cards abertos por ela em Anúncios desde maio; 95% dos dias lançados com 0.</td></tr>
+    <tr><td class="id">347</td><td>Suportes abertos em franquias</td><td>De 2 a 7 por mês (mai–nov); 84% dos dias com 0. Ela recebe muitos suportes, mas abre poucos.</td></tr>
+    <tr><td class="id">348</td><td>Suportes abertos em atendimento</td><td>Zero na fonte desde maio; 99% dos dias com 0.</td></tr>
+    <tr><td class="id">2427</td><td>Pedido de contestação de ocorrências</td><td>2 pedidos em 78 dias úteis, nenhum há 53 dias. Foi substituído pelo chamado de ocorrência do Sapron (200 a 420 por mês).</td></tr>
+    <tr><td class="id">3042 / 3043</td><td>Nota Airbnb conta 2 (trimestre e 7 dias)</td><td>Nenhum valor desde a criação (04/11). Última avaliação da conta em 06/08.</td></tr>
+  </table></div>
+  <h3>Agrupamento</h3>
+  <p><b>551 Check-ins Seazoners + 552 Forms enviados → “% check-ins Seazoners com form enviado”</b>, com meta de 100% no mês. O envio do form está automatizado: quando o Claude identifica a reserva de um Seazoner, a mensagem sai sozinha. Contar check-ins e forms separados repete o mesmo número; o que importa é se algum check-in ficou sem form. A meta é mensal porque o form pode sair no dia seguinte ao check-in.</p>
+</section>
+
+<section>
+  <h2>Setor 10 · Qualidade e Fiscalização (17 KPIs)</h2>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Meta hoje</th><th>Histórico</th><th>Meta proposta</th><th>Por quê</th></tr>
+    <tr><td class="id">541</td><td>Pedidos de ocorrência recebidos</td><td class="n">12/dia</td><td>mediana 13; 30d 22</td><td class="n new">15/dia <span class="pill p-chg">ajuste</span></td><td>Entre a mediana geral e a recente.</td></tr>
+    <tr><td class="id">542</td><td>Ocorrências comunicadas</td><td class="n">5/dia</td><td>mediana 9,5; 30d 12</td><td class="n new">10/dia <span class="pill p-chg">ajuste</span></td><td>A meta de 5 é batida até em dia fraco.</td></tr>
+    <tr><td class="id">543</td><td>Ocorrências pontuadas</td><td class="n">1,4/dia</td><td>mediana 3; 30d 5; 31% dos dias zerados</td><td class="n new">4/dia <span class="pill p-chg">ajuste</span></td><td>Entre a mediana geral e a recente.</td></tr>
+    <tr><td class="id">546</td><td>Ocorrências com evidência válida</td><td class="n">5/dia</td><td>mediana 7; 30d 9</td><td class="n new">8/dia <span class="pill p-chg">ajuste</span></td><td>Perto da mediana recente.</td></tr>
+    <tr><td class="id">547</td><td>Taxa pedidas → aplicadas (30d)</td><td class="n">50%</td><td>30d: mín 66,9%, mediana 73,8%</td><td class="n new">70% <span class="pill p-chg">ajuste</span></td><td>Com 50%, bateu em 99% dos dias.</td></tr>
+    <tr><td class="id">549</td><td>Nota Airbnb trimestre</td><td class="n">4,80</td><td>estável em 4,78</td><td class="n new">4,80 <span class="pill p-keep">mantém</span></td><td>Meta da empresa (tags Comitê/Estratégico).</td></tr>
+    <tr><td class="id">550</td><td>Nota Airbnb últimos 7 dias</td><td class="n">4,80</td><td>30d de 4,77 a 4,82, mediana 4,78</td><td class="n new">4,78 <span class="pill p-chg">ajuste</span></td><td>Funciona como alerta: abaixo disso, olhar os comentários da semana. Também resolve a divergência entre o 4,80 do kpi-system e o 4,75 das skills.</td></tr>
+    <tr><td class="id">2230</td><td>Nota Booking (anual)</td><td class="n">4,50</td><td>caiu de 4,50 para 4,46 desde setembro</td><td class="n new">4,47 no 4º tri; 4,50 em 2027 <span class="pill p-chg">ajuste</span></td><td>Nota anual se mexe devagar; renomear para incluir “anual”.</td></tr>
+    <tr><td class="id">551+552</td><td>% check-ins Seazoners com form enviado</td><td class="n">1/dia cada</td><td>59% a 65% dos dias zerados</td><td class="n new">100% no mês <span class="pill p-add">novo</span></td><td>Agrupamento (ver acima).</td></tr>
+    <tr><td class="id">2424</td><td>Registro de elogios</td><td class="n">8/mês</td><td>ago 6, out 7, nov 0 (set 35 foi lote)</td><td class="n new">6/mês <span class="pill p-chg">ajuste</span></td><td>Patamar dos meses normais.</td></tr>
+    <tr><td class="id">2425</td><td>Multas geradas <span class="down">↓</span></td><td class="n">4/mês</td><td>5, 6, 9, 7</td><td class="n new">6/mês <span class="pill p-chg">ajuste</span></td><td>A meta 4 nunca foi batida; 6 é a média.</td></tr>
+    <tr><td class="id">2426</td><td>Franquias em iminência de multa <span class="down">↓</span></td><td class="n">12</td><td>30d de 13 a 18, mediana 17</td><td class="n new">15 <span class="pill p-chg">ajuste</span></td><td>Tirar 2 franquias da iminência.</td></tr>
+    <tr><td class="id">2438</td><td>Franquias com multa no trimestre <span class="down">↓</span></td><td class="n">25</td><td>3º tri fechou em 24; 4º tri em 14 até 16/11</td><td class="n new">25 <span class="pill p-keep">mantém</span></td><td>Patamar do 3º tri. O ritmo atual (cerca de 27) acende o alerta.</td></tr>
+    <tr><td class="id">3040</td><td>Nota Airbnb trimestre conta 1</td><td class="n">4,80</td><td>igual ao 549 em 8 de 9 dias</td><td class="n new">4,80 <span class="pill p-keep">mantém</span></td><td>Mesma meta do 549.</td></tr>
+    <tr><td class="id">3041</td><td>Nota Airbnb 7 dias conta 1</td><td class="n">4,80</td><td>igual ao 550 em 9 de 9 dias</td><td class="n new">4,78 <span class="pill p-chg">ajuste</span></td><td>Mesma meta do 550.</td></tr>
+    <tr><td class="id">3044</td><td>Nota Airbnb trimestre conta 3</td><td class="n">4,80</td><td>de 4,50 a 4,66</td><td class="n new">4,65 <span class="pill p-chg">ajuste</span></td><td>4,80 está fora do alcance.</td></tr>
+    <tr><td class="id">3045</td><td>Nota Airbnb 7 dias conta 3</td><td class="n">4,80</td><td>só 2 valores</td><td class="n new">4,65 <span class="pill p-chg">ajuste</span></td><td>Mesma meta do 3044.</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Setor 15 · Backoffice Comentários (38 KPIs)</h2>
+
+  <h3>Comentários</h3>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Meta hoje</th><th>Histórico</th><th>Meta proposta</th><th>Por quê</th></tr>
+    <tr><td class="id">335</td><td>Novos comentários importados</td><td class="n">115/dia</td><td>mediana 220; 30d 249</td><td class="n new">200/dia <span class="pill p-chg">ajuste</span></td><td>Perto da mediana.</td></tr>
+    <tr><td class="id">336</td><td>% comentários 5★</td><td class="n">80%</td><td>geral 81%; 30d 84%</td><td class="n new">82% <span class="pill p-chg">ajuste</span></td><td>Um pouco acima do patamar geral.</td></tr>
+    <tr><td class="id">337</td><td>% comentários 4★ <span class="down">↓</span></td><td class="n">15%</td><td>geral 11,9%; 30d 10%</td><td class="n new">12% <span class="pill p-chg">ajuste</span></td><td>No patamar geral.</td></tr>
+    <tr><td class="id">338</td><td>% comentários ≤3★ <span class="down">↓</span></td><td class="n">5%</td><td>geral 6,1%; 30d 5,8%</td><td class="n new">6% <span class="pill p-chg">ajuste</span></td><td>A meta 5% bateu em 26% dos dias.</td></tr>
+    <tr><td class="id">339</td><td>Comentários 5★</td><td class="n">92/dia</td><td>mediana 176; 30d 204</td><td class="n new">180/dia <span class="pill p-chg">ajuste</span></td><td>Perto da mediana.</td></tr>
+    <tr><td class="id">340</td><td>Comentários 4★</td><td class="n">17/dia</td><td>mediana 32; 30d 30</td><td class="n new">30/dia <span class="pill p-chg">ajuste</span></td><td>Perto da mediana.</td></tr>
+    <tr><td class="id">341</td><td>Comentários 3★ <span class="down">↓</span></td><td class="n">—</td><td>mediana 9; 30d 10,5</td><td class="n new">10/dia <span class="pill p-add">nova</span></td><td>Perto da mediana.</td></tr>
+    <tr><td class="id">342</td><td>Comentários 2★ <span class="down">↓</span></td><td class="n">—</td><td>mediana 2,5</td><td class="n new">3/dia <span class="pill p-add">nova</span></td><td>Perto da mediana.</td></tr>
+    <tr><td class="id">343</td><td>Comentários 1★ <span class="down">↓</span></td><td class="n">—</td><td>mediana 4; 30d 5</td><td class="n new">5/dia <span class="pill p-add">nova</span></td><td>Perto da mediana recente.</td></tr>
+    <tr><td class="id">344</td><td>Comentários analisados</td><td class="n">510/mês</td><td>465, 735, 450, 279 (até 16/11)</td><td class="n new">100% dos ≤3★ <span class="pill p-chg">ajuste</span></td><td>Em out e nov os analisados batem com os ≤3★ (450 × 450; 279 × 280). Número fixo não acompanha o volume.</td></tr>
+    <tr><td class="id">345</td><td>Ocorrências e alinhamentos enviados <span class="down">↓</span></td><td class="n">80/mês</td><td>89, 136, 103</td><td class="n new">100/mês <span class="pill p-chg">ajuste</span></td><td>Mediana dos meses fechados.</td></tr>
+    <tr><td class="id">2387</td><td>Manutenções enviadas <span class="down">↓</span></td><td class="n">3/dia</td><td>mediana 3; 30d 5</td><td class="n new">5/dia <span class="pill p-chg">ajuste</span></td><td>No patamar recente.</td></tr>
+  </table></div>
+
+  <h3>Contestações e solicitações de resposta</h3>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Meta hoje</th><th>Histórico</th><th>Meta proposta</th><th>Por quê</th></tr>
+    <tr><td class="id">349</td><td>Contestações abertas</td><td class="n">2/dia</td><td>29, 37, 171 (lote), 35 até 16/11</td><td class="n new">40/mês <span class="pill p-chg">ajuste</span></td><td>Cerca de 2 por dia útil; mensal porque sai em lote.</td></tr>
+    <tr><td class="id">1869</td><td>Contestações aceitas</td><td class="n">1/dia</td><td>9, 12, 40, 11</td><td class="n new">14/mês <span class="pill p-chg">ajuste</span></td><td>35% de 40 (taxa de aceite atual).</td></tr>
+    <tr><td class="id">1870</td><td>Contestações negadas <span class="down">↓</span></td><td class="n">1/dia</td><td>13, 23, 110 (lote), 19</td><td class="n new">26/mês <span class="pill p-chg">ajuste</span></td><td>65% de 40.</td></tr>
+    <tr><td class="id">350</td><td>Contestações aceitas (total)</td><td class="n">—</td><td>412 → 437 (set) → 479</td><td class="n new">500 até 31/12 <span class="pill p-add">nova</span></td><td>Ritmo de 14 por mês.</td></tr>
+    <tr><td class="id">351</td><td>Contestações negadas (total) <span class="down">↓</span></td><td class="n">—</td><td>212 → 249 (set) → 364</td><td class="n new">400 até 31/12 <span class="pill p-add">nova</span></td><td>Ritmo de 26 por mês.</td></tr>
+    <tr><td class="id">352</td><td>Solicitações de resposta abertas</td><td class="n">2/dia</td><td>mediana 1; 30d média 2,1</td><td class="n new">2/dia <span class="pill p-keep">mantém</span></td><td>No patamar recente.</td></tr>
+    <tr><td class="id">353</td><td>Solicitações de resposta atendidas</td><td class="n">2/dia</td><td>quase igual ao 352</td><td class="n new">2/dia <span class="pill p-keep">mantém</span></td><td>Mesma meta do 352.</td></tr>
+    <tr><td class="id">354</td><td>Solicitações pendentes <span class="down">↓</span></td><td class="n">0</td><td>30d média 0,5; 81% dos dias zerados</td><td class="n new">0 <span class="pill p-keep">mantém</span></td><td>Já está no patamar.</td></tr>
+    <tr><td class="id">355</td><td>Respondidos fora das solicitações</td><td class="n">—</td><td>zerado até setembro; 50 em 16/11</td><td class="n new">20/dia <span class="pill p-add">nova</span></td><td>Ponto de partida, se o /responder-airbnb virar rotina. Revisar em 30 dias.</td></tr>
+  </table></div>
+
+  <h3>Reclame Aqui</h3>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Meta hoje</th><th>Histórico</th><th>Meta proposta</th><th>Por quê</th></tr>
+    <tr><td class="id">2332</td><td>Novas reclamações <span class="down">↓</span></td><td class="n">8/mês</td><td>15, 67, 9, 13 até 16/11</td><td class="n new">15/mês <span class="pill p-chg">ajuste</span></td><td>A meta 8 só bateu em outubro.</td></tr>
+    <tr><td class="id">2333</td><td>Novas sem resposta <span class="down">↓</span></td><td class="n">0</td><td>30d de 2 a 6, mediana 3</td><td class="n new">2 <span class="pill p-chg">ajuste</span></td><td>Um passo abaixo da mediana.</td></tr>
+    <tr><td class="id">2334</td><td>Nota RA do mês</td><td class="n">7,5</td><td>7,1 em out/nov; de 6,6 a 8,1</td><td class="n new">7,3 <span class="pill p-chg">ajuste</span></td><td>Um pouco acima do patamar.</td></tr>
+    <tr><td class="id">2585</td><td>Total de reclamações de hóspedes <span class="down">↓</span></td><td class="n">—</td><td>86 → 108 (set) → 119</td><td class="n new">125 até 31/12 <span class="pill p-add">nova</span></td><td>O ritmo atual chega a cerca de 126.</td></tr>
+    <tr><td class="id">2586</td><td>Total de reclamações de proprietários <span class="down">↓</span></td><td class="n">60</td><td>30 → 35 (set) → 48</td><td class="n new">60 <span class="pill p-keep">mantém</span></td><td>Confirmar se é acumulado; se for, vira “novas no mês”.</td></tr>
+  </table></div>
+
+  <h3>Trimestre</h3>
+  <p class="src">Fechamento do 3º tri = valor lançado em 01/10 · ritmo do 4º tri projetado a partir de 16/11 (51% do trimestre)</p>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Meta hoje</th><th>Histórico</th><th>Meta proposta</th><th>Por quê</th></tr>
+    <tr><td class="id">356</td><td>Comentários no trimestre</td><td class="n">16.000</td><td>3º tri 16.039 ✓; 4º ritmo ~17.500</td><td class="n new">16.000 <span class="pill p-keep">mantém</span></td><td>Batida e no ritmo.</td></tr>
+    <tr><td class="id">357</td><td>Checkouts no trimestre</td><td class="n">38.000</td><td>3º tri 38.973 ✓; 4º ritmo ~40.800</td><td class="n new">38.000 <span class="pill p-keep">mantém</span></td><td>Batida e no ritmo.</td></tr>
+    <tr><td class="id">358</td><td>% avaliação/checkout</td><td class="n">44%</td><td>3º tri 41,2%; 4º 43,0%</td><td class="n new">43% <span class="pill p-chg">ajuste</span></td><td>Pouco acima do 4º tri atual.</td></tr>
+    <tr><td class="id">359</td><td>Comentários Airbnb</td><td class="n">12.000</td><td>3º tri 12.995 ✓; 4º ritmo ~14.500</td><td class="n new">12.000 <span class="pill p-keep">mantém</span></td><td>Batida e no ritmo.</td></tr>
+    <tr><td class="id">360</td><td>Checkouts Airbnb</td><td class="n">22.000</td><td>3º tri 25.018 ✓; 4º ritmo ~27.500</td><td class="n new">25.000 <span class="pill p-chg">ajuste</span></td><td>A meta ficou baixa.</td></tr>
+    <tr><td class="id">361</td><td>% avaliação/checkout Airbnb</td><td class="n">55%</td><td>3º tri 51,9%; 4º 52,9%</td><td class="n new">53% <span class="pill p-chg">ajuste</span></td><td>Pouco acima do atual.</td></tr>
+    <tr><td class="id">362</td><td>Comentários Booking</td><td class="n">3.000</td><td>3º tri 2.823; 4º ritmo ~2.100</td><td class="n new">2.500 <span class="pill p-chg">ajuste</span></td><td>O volume da Booking está caindo.</td></tr>
+    <tr><td class="id">363</td><td>Checkouts Booking</td><td class="n">9.000</td><td>3º tri 7.504; 4º ritmo ~6.700</td><td class="n new">7.000 <span class="pill p-chg">ajuste</span></td><td>O volume da Booking está caindo.</td></tr>
+    <tr><td class="id">364</td><td>% avaliação/checkout Booking</td><td class="n">40%</td><td>3º tri 37,6%; 4º 31,4% (caindo)</td><td class="n new">35% <span class="pill p-chg">ajuste</span></td><td>Recuperar parte da queda.</td></tr>
+  </table></div>
+
+  <h3>Uso da ferramenta de avaliação pelas franquias</h3>
+  <div class="wrap"><table>
+    <tr><th>ID</th><th>KPI</th><th>Meta hoje</th><th>Histórico</th><th>Meta proposta</th><th>Por quê</th></tr>
+    <tr><td class="id">3037</td><td>Checkouts das franquias (D−10)</td><td class="n">800</td><td>mediana 599; média 705</td><td class="n new">600/dia <span class="pill p-chg">ajuste</span></td><td>Na mediana. O nome diz “no mês”, mas o lançamento é de D−10.</td></tr>
+    <tr><td class="id">3038</td><td>Pedidos de avaliação pelo Host</td><td class="n">500/mês</td><td>485 em 9 dias úteis (cerca de 54/dia)</td><td class="n new">1.300/mês <span class="pill p-chg">ajuste</span></td><td>Cerca de 60 por dia útil, coerente com o 3039 a 10%.</td></tr>
+    <tr><td class="id">3039</td><td>% pedidos ÷ checkouts</td><td class="n">60</td><td>de 3,8% a 10,2%, mediana 8,5%</td><td class="n new">10% até dez; 15% no 1º tri <span class="pill p-chg">ajuste</span></td><td>60% é inalcançável. Corrigir o “%” e o nome invertido.</td></tr>
+  </table></div>
+</section>
+
+<section class="alert">
+  <h2>Pontos de atenção</h2>
+  <ul>
+    <li><b>Ainda sugiro tirar</b> (sem decisão): duplicados e contagens que não geram decisão: 3040/3041 (iguais a 549/550), 3044/3045 (a consulta não liga nenhum imóvel à conta 3), 337, 339 a 343, 350, 351, 353, 355, 359, 360, 362, 363 e 3037. Os criados em 04/11 (3040 a 3045 e 3037) e os com tag Daily Diretoria precisam de alinhamento com a Ray.</li>
+    <li><b>Dados para corrigir:</b> os lançamentos de setembro do 352 e do 355 (somas de 29.799 e 18.145) distorcem o histórico. O 346 tem 4 lançados em setembro, mas a fonte mostra 0.</li>
+    <li><b>Nomes:</b> 2438 conta franquias (renomear para “Franquias com multa no trimestre”); 2230 sem “anual”; 3039 com o nome invertido e sem “%”.</li>
+    <li><b>345 e 2387 (↓):</b> com “menos é melhor”, a meta pode desestimular o envio. Avaliar se viram teto de acompanhamento.</li>
+    <li><b>3038/3039:</b> dependem de as franquias usarem a ferramenta; não é controle direto da Qualidade.</li>
+    <li><b>Novos KPIs sugeridos:</b> suportes recebidos no mês, % de suportes resolvidos no SLA (meta de 85%; ago 77%, set 72%, out 87%), taxa de aceite das contestações (35%) e chamados de ocorrência atrasados no Sapron (≤ 3).</li>
+  </ul>
+</section>
+
+<footer>Fontes: kpi-system (setores 10 e 15), Suporte Unificado (cards_export), Sapron (franchise_communication_activity). Nenhuma alteração foi aplicada no kpi-system.</footer>
+</main>
+</body>
+</html>
